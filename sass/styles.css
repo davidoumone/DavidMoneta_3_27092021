@@ -333,7 +333,7 @@ footer li a {
 .restaurants__cadre {
   display: -ms-grid;
   display: grid;
-  height: 220px;
+  height: 350px;
   -ms-grid-rows: 1fr 40%;
       grid-template-rows: 1fr 40%;
   -webkit-box-sizing: border-box;
@@ -347,7 +347,7 @@ footer li a {
 
 .restaurants__cadre img {
   width: 100%;
-  height: 130px;
+  height: 255px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -375,10 +375,11 @@ footer li a {
   color: inherit;
   padding: 0;
   border: 0;
-  font: inherit;
   vertical-align: baseline;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 900;
   margin: 10px 0;
+  margin-left: 5px;
 }
 
 .restaurants__description p {
@@ -389,10 +390,11 @@ footer li a {
   color: inherit;
   padding: 0;
   border: 0;
-  font: inherit;
+  font-size: 17px;
   vertical-align: baseline;
-  font-weight: 500;
+  font-weight: 900;
   margin: 10px 0;
+  margin-left: 5px;
 }
 
 .restaurants__description i {
@@ -406,6 +408,49 @@ footer li a {
 @media screen and (max-width: 1024px) {
   .filters__title {
     margin-left: 10px;
+  }
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurants__cadre {
+    height: 360px;
+  }
+  .restaurants__description {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .restaurants__description h3 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .restaurants__description p {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+  .restaurants__description i {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    margin-left: 13em;
   }
 }
 
@@ -434,6 +479,49 @@ footer li a {
   .filters__filter {
     margin-bottom: 20px;
   }
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurants__cadre {
+    height: 350px;
+  }
+  .restaurants__description {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .restaurants__description h3 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .restaurants__description p {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .restaurants__description i {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    margin-left: 9em;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -454,6 +542,37 @@ footer li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .restaurants__description {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .restaurants__description h3 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    font-size: 17px;
+    margin-left: 5px;
+  }
+  .restaurants__description p {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    font-size: 17px;
+    margin-left: 5px;
+  }
+  .restaurants__description i {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    margin-left: 10em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
