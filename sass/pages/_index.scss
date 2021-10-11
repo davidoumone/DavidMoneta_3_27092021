@@ -15,9 +15,7 @@
     text-align: center;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
-    font-weight: bold;
     font-size: 1.4rem;
     margin: 10px 0;
   }
@@ -25,7 +23,6 @@
     text-align: center;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
     font-weight: 200;
     font-size: 17px;
@@ -41,7 +38,9 @@
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 30px;
-
+  &__title {
+    margin-left: 10px;
+  }
   &__List {
     display: flex;
     flex-wrap: wrap;
@@ -98,7 +97,7 @@
   }
   &__cadre {
     display: grid;
-    height: 350px;
+    height: 345px;
     grid-template-rows: 1fr 40%;
     box-sizing: border-box;
     border: 5px solid #fff;
@@ -111,21 +110,25 @@
     height: 255px;
     object-fit: cover;
   }
+  &__new {
+    color: green;
+    background-color: #99e2d0;
+    width: 60px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 2px;
+    position: absolute;
+    margin-left: 600px;
+  }
   &__description {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    color: inherit;
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
   }
   &__description h3 {
-    grid-row: 1;
-    grid-column: 1;
-    color: inherit;
     padding: 0;
     border: 0;
     vertical-align: baseline;
@@ -135,9 +138,6 @@
     margin-left: 5px;
   }
   &__description p {
-    grid-column: 1;
-    grid-row: 2;
-    color: inherit;
     padding: 0;
     border: 0;
     font-size: 17px;
@@ -147,9 +147,40 @@
     margin-left: 5px;
   }
   &__description i {
-    grid-column: 2;
-    grid-row: 2;
-    margin-left: 20em;
+    position: relative;
+    left: 41em;
+    bottom: 2.5em;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .filters {
+    &__title {
+      margin-left: 10px;
+    }
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    &__cadre {
+      height: 360px;
+    }
+    &__new {
+      position: absolute;
+      margin-left: 550px;
+    }
+    &__description h3 {
+      font-size: 25px;
+      margin-left: 5px;
+    }
+    &__description p {
+      font-size: 20px;
+      margin-left: 5px;
+    }
+    &__description i {
+      position: relative;
+      left: 615px;
+    }
   }
 }
 
@@ -162,30 +193,24 @@
   .restaurants {
     display: flex;
     flex-direction: column;
-    &__cadre{
+    &__cadre {
       height: 360px;
     }
-    &__description {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+    &__new {
+      position: absolute;
+      margin-left: 360px;
     }
     &__description h3 {
-      grid-row: 1;
-      grid-column: 1;
       font-size: 20px;
       margin-left: 5px;
     }
     &__description p {
-      grid-column: 1;
-      grid-row: 2;
       font-size: 18px;
       margin-left: 5px;
     }
     &__description i {
-      grid-column: 2;
-      grid-row: 2;
-      margin-left: 13em;
+      position: relative;
+      left: 425px;
     }
   }
 }
@@ -208,30 +233,24 @@
   .restaurants {
     display: flex;
     flex-direction: column;
-    &__cadre{
+    &__cadre {
       height: 350px;
     }
-    &__description {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+    &__new {
+      position: absolute;
+      margin-left: 230px;
     }
     &__description h3 {
-      grid-row: 1;
-      grid-column: 1;
-      font-size: 15px;
+      font-size: 20px;
       margin-left: 5px;
     }
     &__description p {
-      grid-column: 1;
-      grid-row: 2;
-      font-size: 16px;
+      font-size: 18px;
       margin-left: 5px;
     }
     &__description i {
-      grid-column: 2;
-      grid-row: 2;
-      margin-left: 9em;
+      position: relative;
+      left: 305px;
     }
   }
 }
@@ -244,27 +263,21 @@
       display: flex;
       flex-direction: column;
     }
-    &__description {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+    &__new {
+      position: absolute;
+      left: 260px;
     }
     &__description h3 {
-      grid-row: 1;
-      grid-column: 1;
-      font-size: 17px;
+      font-size: 19px;
       margin-left: 5px;
     }
     &__description p {
-      grid-column: 1;
-      grid-row: 2;
-      font-size: 17px;
+      font-size: 19px;
       margin-left: 5px;
     }
     &__description i {
-      grid-column: 2;
-      grid-row: 2;
-      margin-left: 10em;
+      position: relative;
+      left: 550px;
     }
   }
 }
