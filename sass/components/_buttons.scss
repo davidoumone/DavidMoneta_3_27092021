@@ -1,3 +1,7 @@
 .btn {
     @include btn;
 }
+
+.direction{
+    @include direction;
+}

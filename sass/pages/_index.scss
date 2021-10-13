@@ -180,6 +180,8 @@
     &__description i {
       position: relative;
       left: 615px;
+      font-size: 1.7em;
+      margin-top: 10px;
     }
   }
 }
@@ -211,6 +213,8 @@
     &__description i {
       position: relative;
       left: 425px;
+      font-size: 1.7em;
+      margin-top: 10px;
     }
   }
 }
@@ -251,6 +255,8 @@
     &__description i {
       position: relative;
       left: 305px;
+      margin-top: 3px;
+      font-size: 1.5em;
     }
   }
 }
@@ -278,6 +284,37 @@
     &__description i {
       position: relative;
       left: 550px;
+      margin-top: 5px;
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    &__tableau {
+      display: flex;
+      flex-direction: column;
+    }
+    &__new {
+      position: absolute;
+      margin-left: 40px;
+    }
+    &__description h3 {
+      font-size: 19px;
+      margin-left: 5px;
+    }
+    &__description p {
+      font-size: 19px;
+      margin-left: 5px;
+    }
+    &__description i {
+      position: relative;
+      left: 317px;
+      margin-top: 10px;
+      font-size: 1.5em;
     }
   }
 }
