@@ -1,6 +1,21 @@
-.logo{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-    padding-top: 25px;
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    padding-bottom: 20px;
+  }
+  & img {
+    width: 250px;
+  }
+  & form {
+      position: relative;
+      top: 20px;
+      
+  }
+}
+
