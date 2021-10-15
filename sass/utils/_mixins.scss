@@ -13,8 +13,11 @@
 }
 
 @mixin direction{
+    background-color: white;
+    border: none;
+    cursor: pointer;
     position: relative;
     bottom: 85px;
-    left: 50px;
+    left: 15px;
     font-size: 1.5em;
 }

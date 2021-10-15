@@ -15,10 +15,10 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 20px;
     background-color: #f1f1f1;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     position: relative;
     bottom: 70px;
   }
@@ -27,7 +27,7 @@
   }
 
   i {
-    margin-top: 39px;
+    margin-top: 30px;
     font-size: 2.1em;
   }
 }
@@ -50,7 +50,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 0px 100px;
+    gap: 0px 98px;
     grid-auto-flow: row;
   }
   &__container {
@@ -66,19 +66,35 @@
     left: 365px;
     bottom: 25px;
   }
+  &__bouton {
+    margin-left: 625px;
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
+  .contain {
+    max-width: auto;
+  }
+  .dinner__image {
+    width: auto;
+  }
   .menu__contain {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 0px 80px;
+    gap: 0px 40px;
     grid-auto-flow: row;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  .contain {
+    max-width: auto;
+  }
+  .dinner__image {
+    width: auto;
+  }
   .menu {
     display: flex;
     &__contain {
@@ -94,10 +110,21 @@
       position: relative;
       left: 900px;
     }
+    &__bouton {
+      margin-left: 400px;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
+  .dinner__title {
+    position: absolute;
+    left: 20px;
+  }
+  .dinner__container i {
+    position: relative;
+    left: 300px;
+  }
   .menu {
     display: flex;
     &__contain {
@@ -113,10 +140,17 @@
       position: relative;
       left: 650px;
     }
+    &__bouton {
+      margin-left: 250px;
+    }
   }
 }
 
 @media screen and (max-width: 640px) {
+  .dinner__container i {
+    position: relative;
+    left: 250px;
+  }
   .menu {
     display: flex;
     &__contain {
@@ -135,7 +169,13 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
+  .contain {
+    max-width: 425px;
+  }
+  .dinner__image {
+    width: auto;
+  }
   .menu {
     display: flex;
     &__contain {
@@ -145,11 +185,11 @@
       grid-auto-flow: column;
     }
     &__container {
-      width: 445px;
+      width: 390px;
     }
     &__container span {
       position: relative;
-      left: 385px;
+      left: 340px;
     }
   }
 }

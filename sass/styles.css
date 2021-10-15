@@ -2,6 +2,7 @@
 body {
   max-width: 1500px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 a {
@@ -52,9 +53,12 @@ span {
 }
 
 .direction {
+  background-color: white;
+  border: none;
+  cursor: pointer;
   position: relative;
   bottom: 85px;
-  left: 50px;
+  left: 15px;
   font-size: 1.5em;
 }
 
@@ -78,7 +82,8 @@ span {
   }
   form {
     position: relative;
-    top: 20px;
+    top: 30px;
+    right: 10px;
   }
 }
 
@@ -243,10 +248,10 @@ footer li a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
   background-color: #f1f1f1;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   position: relative;
   bottom: 70px;
 }
@@ -256,7 +261,7 @@ footer li a {
 }
 
 .dinner i {
-  margin-top: 39px;
+  margin-top: 30px;
   font-size: 2.1em;
 }
 
@@ -295,7 +300,7 @@ footer li a {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  gap: 0px 100px;
+  gap: 0px 98px;
   grid-auto-flow: row;
 }
 
@@ -314,7 +319,18 @@ footer li a {
   bottom: 25px;
 }
 
+.menu__bouton {
+  margin-left: 625px;
+  width: 200px;
+}
+
 @media screen and (max-width: 1440px) {
+  .contain {
+    max-width: auto;
+  }
+  .dinner__image {
+    width: auto;
+  }
   .menu__contain {
     display: -ms-grid;
     display: grid;
@@ -322,12 +338,18 @@ footer li a {
         grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-    gap: 0px 80px;
+    gap: 0px 40px;
     grid-auto-flow: row;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  .contain {
+    max-width: auto;
+  }
+  .dinner__image {
+    width: auto;
+  }
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -348,9 +370,20 @@ footer li a {
     position: relative;
     left: 900px;
   }
+  .menu__bouton {
+    margin-left: 400px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .dinner__title {
+    position: absolute;
+    left: 20px;
+  }
+  .dinner__container i {
+    position: relative;
+    left: 300px;
+  }
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -371,9 +404,16 @@ footer li a {
     position: relative;
     left: 650px;
   }
+  .menu__bouton {
+    margin-left: 250px;
+  }
 }
 
 @media screen and (max-width: 640px) {
+  .dinner__container i {
+    position: relative;
+    left: 250px;
+  }
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,7 +436,13 @@ footer li a {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
+  .contain {
+    max-width: 425px;
+  }
+  .dinner__image {
+    width: auto;
+  }
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -411,11 +457,11 @@ footer li a {
     grid-auto-flow: column;
   }
   .menu__container {
-    width: 445px;
+    width: 390px;
   }
   .menu__container span {
     position: relative;
-    left: 385px;
+    left: 340px;
   }
 }
 
@@ -555,10 +601,10 @@ footer li a {
 .restaurants__tableau {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   gap: 30px;
   margin: 30px 0 50px;
 }
@@ -576,6 +622,7 @@ footer li a {
   overflow: hidden;
   -webkit-box-shadow: 0 0 7px #c1c1c1;
           box-shadow: 0 0 7px #c1c1c1;
+  cursor: pointer;
 }
 
 .restaurants__cadre img {
