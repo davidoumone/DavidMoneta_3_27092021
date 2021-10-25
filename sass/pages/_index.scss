@@ -2,7 +2,6 @@
 .presentation {
   margin: 0;
   border: 0;
-  font: inherit;
   vertical-align: baseline;
   display: flex;
   justify-content: center;
@@ -60,7 +59,7 @@
   }
   &__filter:hover {
     background-color: #f0cffd;
-    cursor: pointer;
+
     color: purple;
   }
   &__number {
@@ -153,6 +152,7 @@
   }
 }
 
+/*
 @media screen and (max-width: 1440px) {
   .filters {
     &__title {
@@ -167,7 +167,7 @@
     }
     &__new {
       position: absolute;
-      margin-left: 550px;
+      margin-left: 36em;
     }
     &__description h3 {
       font-size: 25px;
@@ -181,7 +181,6 @@
       position: relative;
       left: 615px;
       font-size: 1.7em;
-      margin-top: 10px;
     }
   }
 }
@@ -232,6 +231,7 @@
     }
     &__filter {
       margin-bottom: 20px;
+      width: auto;
     }
   }
   .restaurants {
@@ -242,7 +242,7 @@
     }
     &__new {
       position: absolute;
-      margin-left: 230px;
+      margin-left: 245px;
     }
     &__description h3 {
       font-size: 20px;
@@ -254,8 +254,8 @@
     }
     &__description i {
       position: relative;
-      left: 305px;
-      margin-top: 3px;
+      left: 300px;
+      margin-top: 0px;
       font-size: 1.5em;
     }
   }
@@ -271,7 +271,7 @@
     }
     &__new {
       position: absolute;
-      left: 260px;
+      left: 270px;
     }
     &__description h3 {
       font-size: 19px;
@@ -283,38 +283,10 @@
     }
     &__description i {
       position: relative;
-      left: 550px;
-      margin-top: 5px;
+      left: 540px;
+      margin-top: 0px;
       font-size: 1.5em;
     }
   }
 }
-
-@media screen and (max-width: 480px) {
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    &__tableau {
-      display: flex;
-      flex-direction: column;
-    }
-    &__new {
-      position: absolute;
-      margin-left: 40px;
-    }
-    &__description h3 {
-      font-size: 19px;
-      margin-left: 5px;
-    }
-    &__description p {
-      font-size: 19px;
-      margin-left: 5px;
-    }
-    &__description i {
-      position: relative;
-      left: 317px;
-      margin-top: 10px;
-      font-size: 1.5em;
-    }
-  }
-}
+*/

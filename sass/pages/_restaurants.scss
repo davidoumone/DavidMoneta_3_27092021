@@ -72,29 +72,24 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 320px) {
   .contain {
-    max-width: auto;
-  }
-  .dinner__image {
     width: auto;
   }
-  .menu__contain {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0px 40px;
-    grid-auto-flow: row;
+  .dinner {
+    &__image {
+      width: auto;
+      object-fit: fill;
+    }
+    &__title {
+      font-size: 1.3em;
+    }
+    & i {
+      font-size: 1.5em;
+      margin-top: 21px;
+    }
   }
-}
 
-@media screen and (max-width: 1024px) {
-  .contain {
-    max-width: auto;
-  }
-  .dinner__image {
-    width: auto;
-  }
   .menu {
     display: flex;
     &__contain {
@@ -103,93 +98,200 @@
       gap: 30px 0px;
       grid-auto-flow: column;
     }
+    &__container {
+      width: 290px;
+    }
+    &__container h3 {
+      font-size: 15px;
+    }
+    &__container p {
+      font-size: 12px;
+    }
+    &__container span {
+      position: relative;
+      left: 250px;
+      font-size: 0.9em;
+    }
+    &__bouton {
+      margin-left: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .dinner {
+    &__title {
+      font-size: 1.5em;
+    }
+    & i {
+      font-size: 1.7em;
+      margin-top: 21px;
+    }
+  }
+  .menu {
+    &__container {
+      width: 350px;
+    }
+    &__container h3 {
+      font-size: 17px;
+    }
+    &__container p {
+      font-size: 15px;
+    }
+    &__container span {
+      position: relative;
+      left: 310px;
+    }
+    &__bouton {
+      margin-left: 90px;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .dinner {
+    &__title {
+      font-size: 1.7em;
+    }
+    & i {
+      font-size: 1.8em;
+      margin-top: 27px;
+    }
+  }
+  .menu {
+    &__container {
+      width: 400px;
+    }
+    &__container h3 {
+      font-size: 18px;
+    }
+    &__container p {
+      font-size: 16px;
+    }
+    &__container span {
+      position: relative;
+      left: 360px;
+    }
+    &__bouton {
+      margin-left: 120px;
+    }
+  }
+}
+
+@media screen and (min-width: 634px) {
+  .dinner {
+    .dinner__container {
+      display: flex;
+      justify-content: start;
+    }
+    &__title {
+      margin-left: 30px;
+      font-size: 1.7em;
+    }
+    & i {
+      font-size: 1.8em;
+      margin-left: 335px;
+    }
+  }
+
+  .menu {
+    &__container {
+      width: 610px;
+    }
+    &__container h3 {
+      font-size: 20px;
+    }
+    &__container p {
+      font-size: 18px;
+    }
+    &__container span {
+      position: relative;
+      left: 570px;
+    }
+    &__bouton {
+      margin-left: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dinner {
+    &__title {
+      font-size: 2em;
+    }
+    & i {
+      margin-left: 430px;
+    }
+  }
+  .menu {
+    &__container {
+      width: 740px;
+    }
+    &__container span {
+      position: relative;
+      left: 680px;
+      font-size: 1em;
+    }
+    &__bouton {
+      margin-left: 260px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dinner i {
+    margin-left: 650px;
+  }
+
+  .menu {
     &__container {
       width: 1000px;
     }
     &__container span {
       position: relative;
-      left: 900px;
+      left: 930px;
     }
     &__bouton {
-      margin-left: 400px;
+      margin-left: 410px;
     }
   }
 }
 
-@media screen and (max-width: 768px) {
-  .dinner__title {
-    position: absolute;
-    left: 20px;
-  }
-  .dinner__container i {
-    position: relative;
-    left: 300px;
+@media screen and (min-width: 1440px) {
+  .dinner {
+    &__title {
+      font-size: 2.5em;
+    }
+    & i {
+      font-size: 3em;
+      margin-left: 1000px;
+    }
   }
   .menu {
-    display: flex;
     &__contain {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 30px 0px;
-      grid-auto-flow: column;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0px 40px;
+      grid-auto-flow: row;
     }
     &__container {
-      width: 730px;
+      width: 435px;
+    }
+    &__container h3 {
+      font-size: 20px;
+    }
+    &__container p {
+      font-size: 19px;
     }
     &__container span {
       position: relative;
-      left: 650px;
+      left: 385px;
     }
     &__bouton {
-      margin-left: 250px;
+      margin-left: 700px;
     }
   }
 }
 
-@media screen and (max-width: 640px) {
-  .dinner__container i {
-    position: relative;
-    left: 250px;
-  }
-  .menu {
-    display: flex;
-    &__contain {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 30px 0px;
-      grid-auto-flow: column;
-    }
-    &__container {
-      width: 600px;
-    }
-    &__container span {
-      position: relative;
-      left: 545px;
-    }
-  }
-}
 
-@media screen and (max-device-width: 425px) {
-  .contain {
-    width: auto;
-  }
-  .dinner__image {
-    width: auto;
-  }
-  .menu {
-    display: flex;
-    &__contain {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 30px 0px;
-      grid-auto-flow: column;
-    }
-    &__container {
-      width: 390px;
-    }
-    &__container span {
-      position: relative;
-      left: 340px;
-    }
-  }
-}
