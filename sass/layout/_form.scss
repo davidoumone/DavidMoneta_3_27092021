@@ -1,29 +1,26 @@
-.search{
+.search {
+  font: inherit;
+  vertical-align: baseline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5;
+  background-color: #dbdbdb;
+  &__icone {
     margin: 0;
+    padding: 0;
     border: 0;
     font: inherit;
     vertical-align: baseline;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: 20px;
+  }
+  &__text {
     padding: 0;
-    background-color: #DBDBDB;
-    &__icone{
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font: inherit;
-        vertical-align: baseline;
-        margin-right: 20px;
-    }
-    &__text{
-        padding: 0;
-        border: 0;
-        font: inherit;
-        vertical-align: baseline;
-        margin: 5px 0;
-        color: black;
-        font-weight: 900;
-    }
-    
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 5px 0;
+    color: black;
+    font-weight: 900;
+  }
 }
