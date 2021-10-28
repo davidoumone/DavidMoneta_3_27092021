@@ -218,6 +218,54 @@ span {
   font-weight: 900;
 }
 
+@media screen and (min-width: 320px) {
+  .search {
+    width: 305px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .search {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .search {
+    width: 410px;
+  }
+}
+
+@media screen and (min-width: 634px) {
+  .search {
+    width: 619px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    width: 753px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search {
+    width: 1009px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .search {
+    width: 1425px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .search {
+    width: 1485px;
+  }
+}
+
 footer {
   background-color: #353535;
   color: #ffffff;
@@ -778,7 +826,7 @@ footer li a {
           box-sizing: border-box;
   border: 5px solid #fff;
   border-radius: 15px;
-  overflow: hidden;
+  position: relative;
   -webkit-box-shadow: 0 0 7px #c1c1c1;
           box-shadow: 0 0 7px #c1c1c1;
   cursor: pointer;
@@ -789,6 +837,7 @@ footer li a {
   height: 255px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 15px 15px 0 0;
 }
 
 .restaurants__new {
@@ -801,7 +850,6 @@ footer li a {
   padding-right: 12px;
   border-radius: 2px;
   position: absolute;
-  margin-left: 690px;
 }
 
 .restaurants__description {
@@ -830,10 +878,22 @@ footer li a {
 }
 
 .restaurants__description i {
-  position: relative;
-  left: 27em;
+  position: absolute;
   bottom: 2em;
   font-size: 1.5em;
+}
+
+.restaurants .fas {
+  background: -webkit-linear-gradient(270deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transition: all 0.8s linear;
+  transition: all 0.8s linear;
+}
+
+.restaurants .fas:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 320px) {
@@ -861,12 +921,12 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 175px;
+    left: 175px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 220px;
-    margin-top: 7px;
+    bottom: 1em;
     font-size: 1.7em;
   }
 }
@@ -878,10 +938,10 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 230px;
+    left: 230px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 280px;
   }
 }
@@ -893,10 +953,10 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 280px;
+    left: 280px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 330px;
   }
 }
@@ -908,10 +968,10 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 480px;
+    left: 480px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 530px;
   }
 }
@@ -923,10 +983,10 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 610px;
+    left: 610px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 660px;
   }
 }
@@ -976,10 +1036,10 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 370px;
+    left: 370px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 420px;
   }
 }
@@ -996,11 +1056,31 @@ footer li a {
   }
   .restaurants__new {
     position: absolute;
-    margin-left: 570px;
+    left: 570px;
   }
   .restaurants__description i {
-    position: relative;
+    position: absolute;
     left: 620px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurants__new {
+    position: absolute;
+    left: 610px;
+  }
+  .restaurants__description i {
+    position: absolute;
+    left: 660px;
   }
 }
 
