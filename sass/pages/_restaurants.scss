@@ -6,21 +6,25 @@
 .dinner {
   display: flex;
   flex-direction: column;
+  &__imagecontain {
+    width: 100%;
+    height: 700px;
+  }
   &__image {
     width: 100%;
-    height: 600px;
+    height: 100%;
+    object-fit: fill;
   }
   &__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     width: 100%;
     padding-top: 20px;
     background-color: #f1f1f1;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
   }
   &__title {
     font-size: 2em;
@@ -29,6 +33,22 @@
   i {
     margin-top: 30px;
     font-size: 2.1em;
+    position: absolute;
+  }
+  .fas {
+    background: -webkit-linear-gradient(
+      270deg,
+      rgba(147, 86, 220, 1) 0%,
+      rgba(255, 121, 218, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: all 0.8s linear;
+  }
+
+  .fas:hover {
+    opacity: 1;
   }
 }
 
@@ -60,15 +80,89 @@
     line-height: 10px;
     width: 400px;
     height: 65px;
+    position: relative;
+    animation: apparition 1s ease-in-out;
+    &:hover {
+      & span {
+        position: absolute;
+        transform: translatex(-45px);
+        transition-duration: 1s;
+      }
+      svg {
+        transform: rotate(360deg);
+        transition-duration: 1s;
+      }
+      .menu__container__check {
+        opacity: 1;
+        width: 70px;
+      }
+    }
+  }
+  &__container:nth-child(1) {
+    animation: apparition 1s ease-in-out;
+    animation-delay: 0.2s;
+  }
+  &__container:nth-child(2) {
+    animation: apparition 1s ease-in-out;
+    animation-delay: 0.4s;
+  }
+  &__container:nth-child(3) {
+    animation: apparition 1s ease-in-out;
+    animation-delay: 0.6s;
+  }
+  &__container h3 p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   &__container span {
     position: relative;
     left: 365px;
     bottom: 25px;
   }
+  &__container__check {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 0px;
+    height: 78px;
+    background: #99e2d0;
+    z-index: 1;
+    position: absolute;
+    right: -1px;
+    top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  &__container__check svg {
+    width: 1.5em;
+    padding: 5px;
+    background: white;
+    color: #99e2d0;
+    border-radius: 50px;
+    transition: all 1s;
+  }
+
   &__bouton {
     margin-left: 625px;
     width: 200px;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -77,14 +171,24 @@
     width: auto;
   }
   .dinner {
+    &__imagecontain {
+      width: 100%;
+      height: 350px;
+    }
     &__image {
-      width: auto;
+      width: 100%;
+      height: 100%;
       object-fit: fill;
     }
+
     &__title {
+      position: relative;
+      left: 20px;
       font-size: 1.3em;
     }
     & i {
+      position: absolute;
+      right: 20px;
       font-size: 1.5em;
       margin-top: 21px;
     }
@@ -180,17 +284,23 @@
 
 @media screen and (min-width: 634px) {
   .dinner {
+    &__imagecontain {
+      width: 100%;
+      height: 500px;
+    }
     .dinner__container {
       display: flex;
       justify-content: start;
     }
     &__title {
-      margin-left: 30px;
+      position: relative;
+      left: 20px;
       font-size: 1.7em;
     }
     & i {
       font-size: 1.8em;
-      margin-left: 335px;
+      position: absolute;
+      right: 20px;
     }
   }
 
@@ -219,9 +329,6 @@
     &__title {
       font-size: 2em;
     }
-    & i {
-      margin-left: 430px;
-    }
   }
   .menu {
     &__container {
@@ -239,11 +346,19 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .dinner i {
-    margin-left: 650px;
+  .dinner {
+    &__imagecontain {
+      width: 100%;
+      height: 800px;
+    }
+    &__container {
+      position: relative;
+      bottom: 100px;
+    }
   }
-
   .menu {
+    position: relative;
+    bottom: 85px;
     &__container {
       width: 1000px;
     }
@@ -259,12 +374,15 @@
 
 @media screen and (min-width: 1440px) {
   .dinner {
+    &__imagecontain {
+      width: 100%;
+      height: 900px;
+    }
     &__title {
       font-size: 2.5em;
     }
     & i {
       font-size: 3em;
-      margin-left: 1000px;
     }
   }
   .menu {
@@ -293,5 +411,3 @@
     }
   }
 }
-
-
