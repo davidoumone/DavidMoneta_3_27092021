@@ -71,34 +71,28 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   padding-top: 25px;
 }
 
 @media screen and (min-width: 320px) {
-  .logo {
-    padding-bottom: 20px;
-  }
   img {
-    width: 210px;
+    width: 150px;
   }
   form {
     position: relative;
-    top: 30px;
+    top: 55px;
     right: 10px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .logo {
-    vertical-align: baseline;
-  }
   img {
-    width: 270px;
+    width: 210px;
   }
   form {
     position: relative;
-    top: 20px;
+    top: 38px;
     right: 10px;
     font-size: 1.5em;
   }
@@ -722,7 +716,7 @@ footer li a {
 @media screen and (min-width: 634px) {
   .dinner__imagecontain {
     width: 100%;
-    height: 500px;
+    height: 480px;
   }
   .dinner .dinner__container {
     display: -webkit-box;
@@ -780,7 +774,7 @@ footer li a {
 @media screen and (min-width: 1024px) {
   .dinner__imagecontain {
     width: 100%;
-    height: 600px;
+    height: 530px;
   }
   .dinner__container {
     position: relative;
@@ -791,7 +785,7 @@ footer li a {
     bottom: 85px;
   }
   .menu__container {
-    width: 1000px;
+    width: 994px;
   }
   .menu__container span {
     position: relative;
@@ -805,7 +799,7 @@ footer li a {
 @media screen and (min-width: 1440px) {
   .dinner__imagecontain {
     width: 100%;
-    height: 700px;
+    height: 687px;
   }
   .dinner__title {
     font-size: 2.5em;
@@ -838,6 +832,13 @@ footer li a {
   }
   .menu__bouton {
     margin-left: 700px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .dinner__imagecontain {
+    width: 100%;
+    height: 650px;
   }
 }
 
