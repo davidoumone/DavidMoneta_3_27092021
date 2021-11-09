@@ -449,27 +449,20 @@ footer li a {
   width: 40px;
 }
 
-.menu__contain {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  gap: 0px 98px;
-  grid-auto-flow: row;
-}
-
 .menu__container {
   background-color: white;
   padding: 7px;
   border-radius: 15px;
   line-height: 10px;
   width: 400px;
-  height: 65px;
+  height: 75px;
   position: relative;
   -webkit-animation: apparition 1s ease-in-out;
           animation: apparition 1s ease-in-out;
+}
+
+.menu__container:hover h3 {
+  width: 200px;
 }
 
 .menu__container:hover p {
@@ -517,9 +510,25 @@ footer li a {
           animation-delay: 0.6s;
 }
 
+.menu__container:nth-child(4) {
+  -webkit-animation: apparition 1s ease-in-out;
+          animation: apparition 1s ease-in-out;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.menu__container h3 {
+  padding: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .menu__container p {
-  padding-top: 2px;
-  padding-bottom: 3px;
+  padding: 4px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -538,7 +547,7 @@ footer li a {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   width: 0px;
-  height: 78px;
+  height: 88px;
   background: #99e2d0;
   position: absolute;
   right: 0px;
@@ -633,16 +642,27 @@ footer li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .menu__contain {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    gap: 30px 0px;
-    grid-auto-flow: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
   .menu__container {
+    margin-bottom: 20px;
     width: 290px;
   }
   .menu__container h3 {
@@ -799,7 +819,7 @@ footer li a {
 @media screen and (min-width: 1440px) {
   .dinner__imagecontain {
     width: 100%;
-    height: 687px;
+    height: 650px;
   }
   .dinner__title {
     font-size: 2.5em;
@@ -807,15 +827,19 @@ footer li a {
   .dinner i {
     font-size: 3em;
   }
-  .menu__contain {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    gap: 0px 40px;
-    grid-auto-flow: row;
+  .menu {
+    height: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .menu__container {
     width: 435px;
@@ -830,15 +854,9 @@ footer li a {
     position: relative;
     left: 385px;
   }
-  .menu__bouton {
-    margin-left: 700px;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .dinner__imagecontain {
-    width: 100%;
-    height: 650px;
+  .menu .menu__bouton {
+    margin-left: 0;
+    margin-bottom: 180px;
   }
 }
 
@@ -1251,143 +1269,4 @@ footer li a {
     left: 660px;
   }
 }
-
-/*
-@media screen and (max-width: 1440px) {
-  .filters {
-    &__title {
-      margin-left: 10px;
-    }
-  }
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    &__cadre {
-      height: 360px;
-    }
-    &__new {
-      position: absolute;
-      margin-left: 36em;
-    }
-    &__description h3 {
-      font-size: 25px;
-      margin-left: 5px;
-    }
-    &__description p {
-      font-size: 20px;
-      margin-left: 5px;
-    }
-    &__description i {
-      position: relative;
-      left: 615px;
-      font-size: 1.7em;
-    }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .filters {
-    &__title {
-      margin-left: 10px;
-    }
-  }
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    &__cadre {
-      height: 360px;
-    }
-    &__new {
-      position: absolute;
-      margin-left: 360px;
-    }
-    &__description h3 {
-      font-size: 20px;
-      margin-left: 5px;
-    }
-    &__description p {
-      font-size: 18px;
-      margin-left: 5px;
-    }
-    &__description i {
-      position: relative;
-      left: 425px;
-      font-size: 1.7em;
-      margin-top: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .filters {
-    display: flex;
-    flex-direction: column;
-    &__title {
-      margin-left: 10px;
-    }
-    &__List {
-      display: flex;
-      flex-direction: column;
-    }
-    &__filter {
-      margin-bottom: 20px;
-      width: auto;
-    }
-  }
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    &__cadre {
-      height: 350px;
-    }
-    &__new {
-      position: absolute;
-      margin-left: 245px;
-    }
-    &__description h3 {
-      font-size: 20px;
-      margin-left: 5px;
-    }
-    &__description p {
-      font-size: 18px;
-      margin-left: 5px;
-    }
-    &__description i {
-      position: relative;
-      left: 300px;
-      margin-top: 0px;
-      font-size: 1.5em;
-    }
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    &__tableau {
-      display: flex;
-      flex-direction: column;
-    }
-    &__new {
-      position: absolute;
-      left: 270px;
-    }
-    &__description h3 {
-      font-size: 19px;
-      margin-left: 5px;
-    }
-    &__description p {
-      font-size: 19px;
-      margin-left: 5px;
-    }
-    &__description i {
-      position: relative;
-      left: 540px;
-      margin-top: 0px;
-      font-size: 1.5em;
-    }
-  }
-}
-*/
 /*# sourceMappingURL=styles.css.map */
