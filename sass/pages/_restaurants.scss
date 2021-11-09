@@ -66,23 +66,20 @@
     border-bottom: 3px solid $colour-tertiaire;
     width: 40px;
   }
-  &__contain {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0px 98px;
-    grid-auto-flow: row;
-  }
+
   &__container {
     background-color: white;
     padding: 7px;
     border-radius: 15px;
     line-height: 10px;
     width: 400px;
-    height: 65px;
+    height: 75px;
     position: relative;
     animation: apparition 1s ease-in-out;
     &:hover {
+      & h3 {
+        width: 200px;
+      }
       & p {
         width: 180px;
       }
@@ -113,9 +110,19 @@
     animation: apparition 1s ease-in-out;
     animation-delay: 0.6s;
   }
+  &__container:nth-child(4) {
+    animation: apparition 1s ease-in-out;
+    animation-delay: 0.8s;
+  }
+  &__container h3 {
+    padding: 4px;
+    width: max-content;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   &__container p {
-    padding-top: 2px;
-    padding-bottom: 3px;
+    padding: 4px;
     width: max-content;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -130,7 +137,7 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 0px;
-    height: 78px;
+    height: 88px;
     background: #99e2d0;
     position: absolute;
     right: 0px;
@@ -201,13 +208,15 @@
 
   .menu {
     display: flex;
+    flex-direction: column;
     &__contain {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 30px 0px;
-      grid-auto-flow: column;
+      display: flex;
+      flex-direction: column;
+      height: max-content;
+      align-content: flex-start;
     }
     &__container {
+      margin-bottom: 20px;
       width: 290px;
     }
     &__container h3 {
@@ -381,7 +390,7 @@
   .dinner {
     &__imagecontain {
       width: 100%;
-      height: 687px;
+      height: 650px;
     }
     &__title {
       font-size: 2.5em;
@@ -391,13 +400,12 @@
     }
   }
   .menu {
-    &__contain {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      gap: 0px 40px;
-      grid-auto-flow: row;
-    }
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
     &__container {
       width: 435px;
     }
@@ -411,17 +419,11 @@
       position: relative;
       left: 385px;
     }
-    &__bouton {
-      margin-left: 700px;
+    .menu__bouton {
+      margin-left: 0;
+      margin-bottom: 180px;
     }
   }
 }
 
-@media screen and (min-width: 1500px) {
-  .dinner {
-    &__imagecontain {
-      width: 100%;
-      height: 650px;
-    }
-  }
-}
+
