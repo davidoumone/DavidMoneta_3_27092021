@@ -215,6 +215,7 @@ span {
 @media screen and (min-width: 320px) {
   .search {
     width: 305px;
+    margin-bottom: 42px;
   }
 }
 
@@ -245,6 +246,7 @@ span {
 @media screen and (min-width: 1024px) {
   .search {
     width: 1009px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1063,12 +1065,6 @@ footer li a {
   margin-left: 5px;
 }
 
-.restaurants__description i {
-  position: absolute;
-  bottom: 2em;
-  font-size: 1.5em;
-}
-
 .restaurants .fas {
   background: -webkit-linear-gradient(270deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
@@ -1109,10 +1105,15 @@ footer li a {
     position: absolute;
     left: 175px;
   }
-  .restaurants__description i {
+  .restaurants__heart {
+    width: 0;
+    height: 0;
+    position: relative;
+    bottom: 93px;
+    left: 228px;
+  }
+  .restaurants i {
     position: absolute;
-    left: 220px;
-    bottom: 1em;
     font-size: 1.7em;
   }
 }
@@ -1126,9 +1127,9 @@ footer li a {
     position: absolute;
     left: 230px;
   }
-  .restaurants__description i {
-    position: absolute;
-    left: 280px;
+  .restaurants__heart {
+    position: relative;
+    left: 282px;
   }
 }
 
@@ -1141,9 +1142,9 @@ footer li a {
     position: absolute;
     left: 280px;
   }
-  .restaurants__description i {
-    position: absolute;
-    left: 330px;
+  .restaurants__heart {
+    position: relative;
+    left: 331px;
   }
 }
 
@@ -1156,9 +1157,9 @@ footer li a {
     position: absolute;
     left: 480px;
   }
-  .restaurants__description i {
-    position: absolute;
-    left: 530px;
+  .restaurants__heart {
+    position: relative;
+    left: 531px;
   }
 }
 
@@ -1171,8 +1172,8 @@ footer li a {
     position: absolute;
     left: 610px;
   }
-  .restaurants__description i {
-    position: absolute;
+  .restaurants__heart {
+    position: relative;
     left: 660px;
   }
 }
@@ -1211,22 +1212,23 @@ footer li a {
             flex-direction: column;
   }
   .restaurants__tableau {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    gap: 30px;
-    margin: 30px 0 50px;
+    height: 780px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .restaurants__new {
     position: absolute;
     left: 370px;
   }
-  .restaurants__description i {
-    position: absolute;
-    left: 420px;
+  .restaurants__heart {
+    position: relative;
+    left: 423px;
   }
 }
 
@@ -1244,9 +1246,9 @@ footer li a {
     position: absolute;
     left: 570px;
   }
-  .restaurants__description i {
-    position: absolute;
-    left: 620px;
+  .restaurants__heart {
+    position: relative;
+    left: 618px;
   }
 }
 
@@ -1264,9 +1266,9 @@ footer li a {
     position: absolute;
     left: 610px;
   }
-  .restaurants__description i {
-    position: absolute;
-    left: 660px;
+  .restaurants__heart {
+    position: relative;
+    left: 640px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

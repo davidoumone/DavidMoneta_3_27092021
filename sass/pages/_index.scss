@@ -144,11 +144,6 @@
     margin: 10px 0;
     margin-left: 5px;
   }
-  &__description i {
-    position: absolute;
-    bottom: 2em;
-    font-size: 1.5em;
-  }
 
   .fas {
     background: -webkit-linear-gradient(
@@ -184,10 +179,15 @@
       position: absolute;
       left: 175px;
     }
-    &__description i {
+    &__heart {
+      width: 0;
+      height: 0;
+      position: relative;
+      bottom: 93px;
+      left: 228px;
+    }
+    & i {
       position: absolute;
-      left: 220px;
-      bottom: 1em;
       font-size: 1.7em;
     }
   }
@@ -204,9 +204,10 @@
       position: absolute;
       left: 230px;
     }
-    &__description i {
-      position: absolute;
-      left: 280px;
+
+    &__heart {
+      position: relative;
+      left: 282px;
     }
   }
 }
@@ -222,9 +223,10 @@
       position: absolute;
       left: 280px;
     }
-    &__description i {
-      position: absolute;
-      left: 330px;
+
+    &__heart {
+      position: relative;
+      left: 331px;
     }
   }
 }
@@ -240,9 +242,10 @@
       position: absolute;
       left: 480px;
     }
-    &__description i {
-      position: absolute;
-      left: 530px;
+
+    &__heart {
+      position: relative;
+      left: 531px;
     }
   }
 }
@@ -258,8 +261,9 @@
       position: absolute;
       left: 610px;
     }
-    &__description i {
-      position: absolute;
+
+    &__heart {
+      position: relative;
       left: 660px;
     }
   }
@@ -283,19 +287,19 @@
     display: flex;
     flex-direction: column;
     &__tableau {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 30px;
-      margin: 30px 0 50px;
+      height: 780px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
     &__new {
       position: absolute;
       left: 370px;
     }
-    &__description i {
-      position: absolute;
-      left: 420px;
+
+    &__heart {
+      position: relative;
+      left: 423px;
     }
   }
 }
@@ -308,9 +312,10 @@
       position: absolute;
       left: 570px;
     }
-    &__description i {
-      position: absolute;
-      left: 620px;
+
+    &__heart {
+      position: relative;
+      left: 618px;
     }
   }
 }
@@ -323,10 +328,10 @@
       position: absolute;
       left: 610px;
     }
-    &__description i {
-      position: absolute;
-      left: 660px;
+
+    &__heart {
+      position: relative;
+      left: 640px;
     }
   }
 }
-
