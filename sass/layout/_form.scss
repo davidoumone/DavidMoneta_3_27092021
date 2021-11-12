@@ -1,5 +1,5 @@
 .search {
-  margin-left: 10px;
+  margin-left: 0px;
   font: initial;
   display: flex;
   justify-content: center;
@@ -25,54 +25,5 @@
   }
 }
 
-@media screen and (min-width: 320px) {
-  .search{
-    width: 305px;
-    margin-bottom: 42px;
-  }
-}
-
-@media screen and (min-width: 375px) {
-  .search{
-    width: 360px;
-  }
-}
-
-@media screen and (min-width: 425px) {
-  .search{
-    width: 410px;
-  }
-}
-
-@media screen and (min-width: 634px) {
-  .search{
-    width: 619px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .search{
-    width: 753px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .search{
-    width: 1009px;
-    margin-bottom: 25px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .search{
-    width: 1425px;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .search{
-    width: 1485px;
-  }
-}
 
 
