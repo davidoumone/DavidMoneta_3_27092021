@@ -175,3 +175,32 @@
     opacity: 1;
   }
 }
+
+/* responsive tablette */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants {
+    &__new {
+      color: green;
+      background-color: #99e2d0;
+      width: 60px;
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      border-radius: 2px;
+      position: absolute;
+      left: 86.5%;
+    }
+    &__description h3 {
+      font-size: 20px;
+    }
+    &__description p {
+      font-size: 20px;
+    }
+    &__heart {
+      position: relative;
+      left: 93%;
+    }
+  }
+}

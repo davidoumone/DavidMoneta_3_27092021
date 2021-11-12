@@ -148,11 +148,11 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 0px;
-    height: 88px;
+    height: 89px;
     background: #99e2d0;
     position: absolute;
     right: 0px;
-    top: 1px;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,5 +187,48 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+/* responsive tablette*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu {
+    &__container {
+      &:hover {
+        & h3 {
+          width: 250px;
+        }
+        & p {
+          width: 250px;
+        }
+        & span {
+          position: absolute;
+          transform: translate(-80px, 9px);
+          transition-duration: 1s;
+        }
+        svg {
+          transform: rotate(360deg);
+          transition-duration: 1s;
+        }
+        .menu__container__check {
+          opacity: 1;
+          width: 90px;
+        }
+      }
+    }
+
+    &__container span {
+      position: relative;
+      bottom: 31%;
+      left: 94%;
+      font-size: 0.9em;
+    }
+
+    &__bouton {
+      position: relative;
+      left: 34%;
+      
+    }
   }
 }
