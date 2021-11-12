@@ -503,11 +503,11 @@ footer li a {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   width: 0px;
-  height: 88px;
+  height: 89px;
   background: #99e2d0;
   position: absolute;
   right: 0px;
-  top: 1px;
+  top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,6 +567,43 @@ footer li a {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+/* responsive tablette*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu__container:hover h3 {
+    width: 250px;
+  }
+  .menu__container:hover p {
+    width: 250px;
+  }
+  .menu__container:hover span {
+    position: absolute;
+    -webkit-transform: translate(-80px, 9px);
+            transform: translate(-80px, 9px);
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
+  .menu__container:hover svg {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
+  .menu__container:hover .menu__container__check {
+    opacity: 1;
+    width: 90px;
+  }
+  .menu__container span {
+    position: relative;
+    bottom: 31%;
+    left: 94%;
+    font-size: 0.9em;
+  }
+  .menu__bouton {
+    position: relative;
+    left: 34%;
   }
 }
 
@@ -800,5 +837,31 @@ footer li a {
 
 .restaurants .fas:hover {
   opacity: 1;
+}
+
+/* responsive tablette */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants__new {
+    color: green;
+    background-color: #99e2d0;
+    width: 60px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 2px;
+    position: absolute;
+    left: 86.5%;
+  }
+  .restaurants__description h3 {
+    font-size: 20px;
+  }
+  .restaurants__description p {
+    font-size: 20px;
+  }
+  .restaurants__heart {
+    position: relative;
+    left: 93%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
