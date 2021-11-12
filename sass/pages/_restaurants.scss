@@ -3,12 +3,14 @@
   background-color: #f1f1f1;
   padding-bottom: 90px;
 }
+
+/* partie image et container titre + coeur */
 .dinner {
   display: flex;
   flex-direction: column;
   &__imagecontain {
     width: 100%;
-    height: 700px;
+    height: 350px;
   }
   &__image {
     width: 100%;
@@ -27,13 +29,16 @@
     bottom: 60px;
   }
   &__title {
-    font-size: 2em;
+    position: relative;
+    left: 20px;
+    font-size: 1.3em;
   }
 
-  i {
-    margin-top: 30px;
-    font-size: 2.1em;
+  & i {
     position: absolute;
+    right: 6%;
+    font-size: 1.5em;
+    margin-top: 21px;
   }
   .fas {
     background: -webkit-linear-gradient(
@@ -52,14 +57,16 @@
   }
 }
 
+/* partie menu */
 .menu {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  &__selection {
+  &__contain {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    height: max-content;
+    align-content: flex-start;
   }
   &__title {
     font-weight: bold;
@@ -72,20 +79,21 @@
     padding: 7px;
     border-radius: 15px;
     line-height: 10px;
-    width: 400px;
+    margin-bottom: 20px;
+    width: 94%;
     height: 75px;
     position: relative;
     animation: apparition 1s ease-in-out;
     &:hover {
       & h3 {
-        width: 200px;
+        width: 190px;
       }
       & p {
-        width: 180px;
+        width: 175px;
       }
       & span {
         position: absolute;
-        transform: translate(-47px, 9px);
+        transform: translate(-60px, 9px);
         transition-duration: 1s;
       }
       svg {
@@ -120,6 +128,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 15px;
   }
   &__container p {
     padding: 4px;
@@ -127,11 +136,13 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 13px;
   }
   &__container span {
     position: relative;
-    left: 365px;
-    bottom: 30px;
+    bottom: 31%;
+    left: 87%;
+    font-size: 0.9em;
   }
   &__container__check {
     border-top-right-radius: 15px;
@@ -159,7 +170,8 @@
   }
 
   &__bouton {
-    margin-left: 625px;
+    position: relative;
+    left: 24%;
     width: 200px;
   }
 }
@@ -177,253 +189,3 @@
     transform: translateY(0px);
   }
 }
-
-@media screen and (min-width: 320px) {
-  .contain {
-    width: auto;
-  }
-  .dinner {
-    &__imagecontain {
-      width: 100%;
-      height: 350px;
-    }
-    &__image {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-
-    &__title {
-      position: relative;
-      left: 20px;
-      font-size: 1.3em;
-    }
-    & i {
-      position: absolute;
-      right: 20px;
-      font-size: 1.5em;
-      margin-top: 21px;
-    }
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    &__contain {
-      display: flex;
-      flex-direction: column;
-      height: max-content;
-      align-content: flex-start;
-    }
-    &__container {
-      margin-bottom: 20px;
-      width: 290px;
-    }
-    &__container h3 {
-      font-size: 15px;
-    }
-    &__container p {
-      font-size: 13px;
-    }
-    &__container span {
-      position: relative;
-      left: 250px;
-      font-size: 0.9em;
-    }
-    &__bouton {
-      margin-left: 60px;
-    }
-  }
-}
-
-@media screen and (min-width: 375px) {
-  .dinner {
-    &__title {
-      font-size: 1.5em;
-    }
-    & i {
-      font-size: 1.7em;
-      margin-top: 21px;
-    }
-  }
-  .menu {
-    &__container {
-      width: 350px;
-    }
-    &__container h3 {
-      font-size: 17px;
-    }
-    &__container p {
-      font-size: 15px;
-    }
-    &__container span {
-      position: relative;
-      left: 310px;
-    }
-    &__bouton {
-      margin-left: 90px;
-    }
-  }
-}
-
-@media screen and (min-width: 425px) {
-  .dinner {
-    &__title {
-      font-size: 1.7em;
-    }
-    & i {
-      font-size: 1.8em;
-      margin-top: 27px;
-    }
-  }
-  .menu {
-    &__container {
-      width: 400px;
-    }
-    &__container h3 {
-      font-size: 18px;
-    }
-    &__container p {
-      font-size: 16px;
-    }
-    &__container span {
-      position: relative;
-      left: 360px;
-    }
-    &__bouton {
-      margin-left: 120px;
-    }
-  }
-}
-
-@media screen and (min-width: 634px) {
-  .dinner {
-    &__imagecontain {
-      width: 100%;
-      height: 480px;
-    }
-    .dinner__container {
-      display: flex;
-      justify-content: start;
-    }
-    &__title {
-      position: relative;
-      left: 20px;
-      font-size: 1.7em;
-    }
-    & i {
-      font-size: 1.8em;
-      position: absolute;
-      right: 20px;
-    }
-  }
-
-  .menu {
-    &__container {
-      width: 610px;
-    }
-    &__container h3 {
-      font-size: 20px;
-    }
-    &__container p {
-      font-size: 18px;
-    }
-    &__container span {
-      position: relative;
-      left: 570px;
-    }
-    &__bouton {
-      margin-left: 200px;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .dinner {
-    &__title {
-      font-size: 2em;
-    }
-  }
-  .menu {
-    &__container {
-      width: 740px;
-    }
-    &__container span {
-      position: relative;
-      left: 680px;
-      font-size: 1em;
-    }
-    &__bouton {
-      margin-left: 260px;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .dinner {
-    &__imagecontain {
-      width: 100%;
-      height: 530px;
-    }
-    &__container {
-      position: relative;
-      bottom: 100px;
-    }
-  }
-  .menu {
-    position: relative;
-    bottom: 85px;
-    &__container {
-      width: 994px;
-    }
-    &__container span {
-      position: relative;
-      left: 930px;
-    }
-    &__bouton {
-      margin-left: 410px;
-    }
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .dinner {
-    &__imagecontain {
-      width: 100%;
-      height: 650px;
-    }
-    &__title {
-      font-size: 2.5em;
-    }
-    & i {
-      font-size: 3em;
-    }
-  }
-  .menu {
-    height: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    &__container {
-      width: 435px;
-    }
-    &__container h3 {
-      font-size: 20px;
-    }
-    &__container p {
-      font-size: 19px;
-    }
-    &__container span {
-      position: relative;
-      left: 385px;
-    }
-    .menu__bouton {
-      margin-left: 0;
-      margin-bottom: 180px;
-    }
-  }
-}
-
-
