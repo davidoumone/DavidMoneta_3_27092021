@@ -83,7 +83,7 @@
     width: 94%;
     height: 75px;
     position: relative;
-    animation: apparition 1s ease-in-out;
+    animation: apparition 1.5s ease-in-out;
     &:hover {
       & h3 {
         width: 190px;
@@ -108,19 +108,19 @@
   }
   &__container:nth-child(1) {
     animation: apparition 1s ease-in-out;
-    animation-delay: 0.2s;
+    animation-delay: 0.6s;
   }
   &__container:nth-child(2) {
     animation: apparition 1s ease-in-out;
-    animation-delay: 0.4s;
+    animation-delay: 0.8s;
   }
   &__container:nth-child(3) {
     animation: apparition 1s ease-in-out;
-    animation-delay: 0.6s;
+    animation-delay: 1s;
   }
   &__container:nth-child(4) {
     animation: apparition 1s ease-in-out;
-    animation-delay: 0.8s;
+    animation-delay: 1.2s;
   }
   &__container h3 {
     padding: 4px;
@@ -228,7 +228,32 @@
     &__bouton {
       position: relative;
       left: 34%;
-      
+    }
+  }
+}
+
+/* responsive desktop*/
+
+@media screen and (min-width: 993px) {
+  .dinner {
+    &__title {
+      font-size: 2em;
+    }
+    & i {
+      font-size: 2em;
+    }
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0% 1.5%;
+    grid-auto-flow: row;
+
+    &__bouton {
+      position: relative;
+      left: 115%;
+      top: 45%;
     }
   }
 }

@@ -410,8 +410,8 @@ footer li a {
   width: 94%;
   height: 75px;
   position: relative;
-  -webkit-animation: apparition 1s ease-in-out;
-          animation: apparition 1s ease-in-out;
+  -webkit-animation: apparition 1.5s ease-in-out;
+          animation: apparition 1.5s ease-in-out;
 }
 
 .menu__container:hover h3 {
@@ -445,29 +445,29 @@ footer li a {
 .menu__container:nth-child(1) {
   -webkit-animation: apparition 1s ease-in-out;
           animation: apparition 1s ease-in-out;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .menu__container:nth-child(2) {
   -webkit-animation: apparition 1s ease-in-out;
           animation: apparition 1s ease-in-out;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .menu__container:nth-child(3) {
   -webkit-animation: apparition 1s ease-in-out;
           animation: apparition 1s ease-in-out;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .menu__container:nth-child(4) {
   -webkit-animation: apparition 1s ease-in-out;
           animation: apparition 1s ease-in-out;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .menu__container h3 {
@@ -604,6 +604,31 @@ footer li a {
   .menu__bouton {
     position: relative;
     left: 34%;
+  }
+}
+
+/* responsive desktop*/
+@media screen and (min-width: 993px) {
+  .dinner__title {
+    font-size: 2em;
+  }
+  .dinner i {
+    font-size: 2em;
+  }
+  .menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 0% 1.5%;
+    grid-auto-flow: row;
+  }
+  .menu__bouton {
+    position: relative;
+    left: 115%;
+    top: 45%;
   }
 }
 
@@ -862,6 +887,64 @@ footer li a {
   .restaurants__heart {
     position: relative;
     left: 93%;
+  }
+}
+
+/* responsive desktop*/
+@media screen and (min-width: 993px) {
+  .filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filters__List {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .filters__filter {
+    width: 25%;
+  }
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurants__tableau {
+    height: 780px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .restaurants__cadre {
+    margin-right: 2%;
+    margin-left: 3%;
+  }
+  .restaurants__new {
+    position: absolute;
+    left: 80%;
+  }
+  .restaurants__heart {
+    position: relative;
+    left: 44.5%;
+    bottom: 13%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

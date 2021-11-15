@@ -204,3 +204,47 @@
     }
   }
 }
+
+/* responsive desktop*/
+
+@media screen and (min-width: 993px) {
+  .filters {
+    display: flex;
+    flex-direction: column;
+    &__List {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__filter {
+      width: 25%;
+    }
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    &__tableau {
+      height: 780px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__cadre {
+      margin-right: 2%;
+      margin-left: 3%;
+    }
+
+    &__new {
+      position: absolute;
+      left: 80%;
+    }
+
+    &__heart {
+      position: relative;
+      left: 44.5%;
+      bottom: 13%;
+    }
+  }
+}
