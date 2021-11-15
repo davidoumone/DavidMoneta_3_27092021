@@ -609,6 +609,16 @@ footer li a {
 
 /* responsive desktop*/
 @media screen and (min-width: 993px) {
+  .dinner__imagecontain {
+    width: 100%;
+    height: 480px;
+  }
+  .dinner__image {
+    width: 100%;
+    height: 460px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .dinner__title {
     font-size: 2em;
   }
