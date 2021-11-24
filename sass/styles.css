@@ -50,8 +50,13 @@ span {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   font-weight: 600;
   margin: 30px 0;
+  opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.7;
 }
 
 .direction {
@@ -90,7 +95,7 @@ header form {
 }
 
 .containloading {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -273,6 +278,8 @@ footer li a {
   text-decoration: none;
   color: inherit;
   font-size: 22.5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
 }
 
 @media screen and (max-width: 640px) {
@@ -769,7 +776,7 @@ footer li a {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 10px;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -788,12 +795,11 @@ footer li a {
 .restaurants__cadre {
   display: -ms-grid;
   display: grid;
-  height: 345px;
+  height: 338px;
   -ms-grid-rows: 1fr 40%;
       grid-template-rows: 1fr 40%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 5px solid #fff;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   border-radius: 15px;
   position: relative;
   -webkit-box-shadow: 0 0 7px #c1c1c1;
